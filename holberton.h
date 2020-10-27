@@ -13,11 +13,11 @@
 
 typedef struct specifier
 {
-  char spec;
+  char *spec;
   int (*function_ptr)(va_list);
 } specifier_t;
-int parser(const char *format, specifier function_list[], va_list lst);
-int _print(const char *format, ...);
+int parser(const char *format, specifier_t function_list[], va_list lst);
+int _printf(const char *format, ...);
 int _putchar(char c);
 int _write_char(char);
 int print_char(va_list);

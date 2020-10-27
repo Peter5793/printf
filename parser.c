@@ -18,19 +18,20 @@ int parser(const char *format, specifier_t function_list[], va_list lst)
 		if (format[i] == '%') /*Checks for format specifiers*/
 		{
 			/*Iterates through struct to find the right func*/
-			for (j = 0; function_list[j].sym != NULL; j++)
+			for (j = 0; function_list[j].spec[0] != NULL; j++)
 			{
-				if (format[i + 1] == function_list[j].sym[0])
+				if (format[i + 1] == function_list[j].spec[0])
 				{
-					r_val = function_list[j].f(lst);
+					r_val = function_list[j].(lst);
 					if (r_val == -1)
 						return (-1);
-					printed_chars += r_val;
+					b += r_val;
 					break;
 				}
 			}
-			if (function_list[j].sym == NULL && format[i + 1] != ' ')
+			if (function_list[j].spec[0] == NULL && format[i + 1] != ' ')
 			{
+			  
 				if (format[i + 1] != '\0')
 				{
 					_write_char(format[i]);
