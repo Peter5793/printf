@@ -19,12 +19,12 @@ typedef struct specifier
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_char(va_list all_parameters);
-int print_string(va_list all_parameters);
-int print_percent(va_list all_parameters);
-int print_integer(va_list all_parameters);
+int print_char(va_list arg_list);
+int print_string(va_list arg_list);
+int print_percent(va_list arg_list);
+int print_integer(va_list arg_list);
 int print_unsign(int n);
 int counter(int j);
 int _puts(char *str);
-int get_struct(char c, va_list all_parameters);
+int get_struct(char c, va_list arg_list);
 #endif /* HOLBERTON_H */
