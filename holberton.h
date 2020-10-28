@@ -17,6 +17,7 @@ typedef struct specifier
 	int (*function_ptr)(va_list);
 } specifier_t;
 
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(va_list arg_list);
