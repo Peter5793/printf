@@ -10,9 +10,9 @@
 
 int _printf(const char *format, ...)
 {
-  int b; /**printed char*/
-  specifier_t function_list[] = {
-	        {"c", print_char},
+	int b; /**printed char*/
+	specifier_t function_list[] = {
+		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_integer},
@@ -26,16 +26,17 @@ int _printf(const char *format, ...)
 		{"X", print_heX},
 		{NULL, NULL}
 	};
-  va_list lst;
-  if (format == NULL)
-    return (-1);
+	va_list lst;
 
-  va_start(lst, format);
-  /**calling the parser function*/
+	if (format == NULL)
+		return (-1);
 
-  b = parser(format, function_list, lst);
-  va_end(lst);
-  return (b);
-  
-  
+	va_start(lst, format);
+	/**calling the parser function*/
+
+	b = parser(format, function_list, lst);
+	va_end(lst);
+	return (b);
+
+
 }
