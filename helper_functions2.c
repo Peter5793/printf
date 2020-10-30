@@ -51,7 +51,7 @@ int counter(int j)
 
 int print_integer(va_list arg_list)
 {
-	int i = va_arg(all_parameters, int);
+	int i = va_arg(arg_list, int);
 	int count = 0;
 
 	count = counter(i);
