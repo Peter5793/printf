@@ -1,0 +1,26 @@
+.TH man_2_printf
+.SH NAME
+.SH DATE: 30TH OCTOBER 2020
+.SH SYNOPSIS
+.B #include "holberton.h"
+.SH DESCRIPTION
+.B This man_3_printf is a file that describes the function _printf that is used to
+.B print "string, character, float, percent, octak and hexadecimal" values onto the output screen
+We use _printf() function with the %<variable> specifiers to display the value of a <br /bvariable.
+%d is used to display the value of an integer, %c for character variable, %f for float varIable. %s for string variable, %lf for double, %x for hexadecimal variable.
+To generate a new line we use “\n” in C _printf() statement
+.SH OPTIONS
+.br /-c character
+.br the format string is a character string, begining and ending in its initial shift state, if any. The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments. Each conversion specification is introduced by the character %, and ends with a conversion specifier.
+.B /% A ‘%’ is written. No  is converted. The complete conversion specification is ‘%%’
+.BR / -c - if no l modifier is present, the int argument is converted to character and a character is printed on the output
+.BR /-s is for strings checked by our _printf
+.BR /- i is for integers that is used by out _printf to print integers to the STD output (1)
+.BR /- d is for integers used by our _printf to print decimal integers on the STD output
+.BR /- b: the unsigned int is converted to binary
+
+.TP Thus,
+.I _printf(“%d,%c,%i,%f,%s…..,n);
+.B AUTHORS
+
+.B[Faith Okoth https://github.com/Faith-qa Peter Lugalia https://github.com/Peter5793]
