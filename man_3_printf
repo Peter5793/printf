@@ -23,4 +23,4 @@ To generate a new line we use “\n” in C _printf() statement
 .I _printf(“%d,%c,%i,%f,%s…..,n);
 .B AUTHORS
 
-.B[Faith Okoth 
+.B[Faith Okoth https://github.com/Faith-qa Peter Lugalia https://github.com/Peter5793]
