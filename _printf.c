@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-  /**points to an undefined number ofarguments*/
+	/**points to an undefined number ofarguments*/
 	va_list arg_list;
 	int a, b, count = 0;
 
@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 	/* Returns char count here */
 	return (count);
 }
-	
+
 /**
  *get_struct - gets the struct
  *@c: the char
@@ -59,12 +59,12 @@ int _printf(const char *format, ...)
 int get_struct(char c, va_list arg_list)
 {
 	specifier_t structs_ar[] = {
-				    {'c', print_char},
-				    {'s', print_string},
-				    {'%', print_percent},
-				    {'d', print_integer},
-				    {'i', print_integer},
-		                    {'\0', NULL}
+		{'c', print_char},
+		{'s', print_string},
+		{'%', print_percent},
+		{'d', print_integer},
+		{'i', print_integer},
+		{'\0', NULL}
 	};
 	int b = 0;
 
@@ -75,7 +75,7 @@ int get_struct(char c, va_list arg_list)
 			return (structs_ar[b].function_ptr(arg_list));
 			b++;
 		}
-		
+
 	}
 	return (-1);
 }
